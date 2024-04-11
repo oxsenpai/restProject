@@ -19,5 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('furnitureStore.urls'))
+    path('', include('furnitureStore.urls')),
+    #session authentication
+    path('drf-auth/', include('rest_framework.urls'))
 ]
