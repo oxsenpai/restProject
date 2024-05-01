@@ -36,22 +36,18 @@ class ProductViewSet(ModelViewSet):
         return Response({"message": f"Товар '{product.name}' помечен как 'не в наличии'."}, status=228)
 
 
-
-
-
-
 class CategoryViewSet(ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    http_method_names = ('get', 'post', 'put', 'delete')
-    permission_classes = [IsAdminUser]
+    http_method_names = ('get',)
+    
 
 
 class FirmViewSet(ModelViewSet):
     queryset = Firm.objects.all()
     serializer_class = FirmSerializer
-    http_method_names = ('get', 'post', 'put', 'delete')
-    permission_classes = [IsAdminUser]
+    http_method_names = ('get',)
+    
 
 
 class OrderViewSet(ModelViewSet):
@@ -59,7 +55,6 @@ class OrderViewSet(ModelViewSet):
     serializer_class = OrderSerializer
     http_method_names = ('get', 'post', 'put', 'delete')
     permission_classes = [IsAuthenticated]
-
 
 
 class OrderItemViewSet(ModelViewSet):
