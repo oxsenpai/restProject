@@ -64,4 +64,4 @@ class MySeleniumTests(StaticLiveServerTestCase):
         self.selenium.get(f"{self.live_server_url}/")
         elements = self.selenium.find_elements(By.XPATH, '//div')
         for element in elements:
-            self.assertIn(element.text, list(map(lambda b: b.name, Category.objects.all())))
+            self.assertIn(element.text, list(map(lambda b: b.name, Product.objects.all())))

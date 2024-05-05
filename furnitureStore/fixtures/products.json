@@ -1,5 +1,18 @@
-[{"model": "furnitureStore.Category",
+[   {"model": "furnitureStore.Category",
+    "pk": 1,
+    "fields": {"name": "Прихожие"}
+    },
+    {"model": "furnitureStore.Firm",
+    "pk": 1,
+    "fields": {"name": "Завод 1"}
+    },
+    {"model": "furnitureStore.Product",
     "pk": 1,
     "fields": 
-        {"name": "Прихожие"}
+        {
+            "category": 1,
+            "firm": 1,
+            "name": "Прихожая 1",
+            "price": "1000.00"        
+        }
     }]
